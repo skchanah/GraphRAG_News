@@ -1,3 +1,5 @@
 .secrets/
 main.py
 venv/
+original.py
+work.py
