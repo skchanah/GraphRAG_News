@@ -6,6 +6,9 @@ import logging
 from contextlib import asynccontextmanager #declarator
 from fastapi import FastAPI, HTTPException, Request
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from .setup import *
 from .search import *
 from graphrag.query.question_gen.local_gen import LocalQuestionGen

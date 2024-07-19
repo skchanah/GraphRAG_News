@@ -45,7 +45,7 @@ class ContentFocusedSpider(scrapy.Spider):
         # Save doc
         parsed_url = urlparse(response.url)
         file_path = parsed_url.path.strip('/').replace('/', '_') or 'index'
-        markdown_filename = f'.data/markdown_files/{file_path}.md'
+        markdown_filename = f'.data/markdown_files/{file_path}.txt' #or .md
         
         with open(markdown_filename, 'w', encoding='utf-8') as f:
             f.write(markdown_content)

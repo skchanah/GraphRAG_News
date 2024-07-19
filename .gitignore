@@ -1,9 +1,12 @@
-.secrets/
+.GraphRAG_KB/
+cache/
 main.py
 venv/
 original.py
 work.py
+input/
 output/
 prompts/
+lancedb/
 settings.yaml
 .env

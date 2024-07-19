@@ -94,10 +94,10 @@ async def setup_llm_and_embedder():
     logger.info("Setting up LLM and embedder")
 
     # Get API keys and base URLs
-    api_key = os.getenv("LLM_API_KEY", False) # or os.environ.get() or os.environ[""]
-    api_key_embedding = os.getenv("EMBEDDING_API_KEY", api_key)
-    api_base = os.getenv("LLM_API_BASE", "https://api.openai.com/v1")
-    api_base_embedding = os.getenv("EMBEDDING_API_BASE", "https://api.openai.com/v1")
+    api_key = os.getenv("GRAPHRAG_API_KEY", False) # or os.environ.get() or os.environ[""]
+    api_key_embedding = os.getenv("GRAPHRAG_API_KEY_EMBEDDING", api_key)
+    api_base = os.getenv("GRAPHRAG_API_BASE", "https://api.openai.com/v1")
+    api_base_embedding = os.getenv("GRAPHRAG_API_BASE_EMBEDDING", "https://api.openai.com/v1")
 
     # Get model names
     llm_model = os.getenv("LLM_MODEL", "gpt-3.5-turbo-0125")
