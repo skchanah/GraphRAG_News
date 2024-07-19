@@ -3,3 +3,7 @@ main.py
 venv/
 original.py
 work.py
+output/
+prompts/
+settings.yaml
+.env
