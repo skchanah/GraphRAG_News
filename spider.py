@@ -8,8 +8,8 @@ from urllib.parse import urlparse
 
 class ContentFocusedSpider(scrapy.Spider):
     name = 'content_focused_spider'
-    start_urls = ['https://crawl4ai.com/mkdocs/']
-    allowed_domains = ['crawl4ai.com']
+    start_urls = ['https://dracos.co.uk/made/bbc-news-archive/2024/07/01/']
+    allowed_domains = ['dracos.co.uk']
 
     def __init__(self, *args, **kwargs):
         super(ContentFocusedSpider, self).__init__(*args, **kwargs)
