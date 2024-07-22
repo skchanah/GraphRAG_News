@@ -1,5 +1,5 @@
 # GraphRAG News Intelligence 
-An offline, self-hosted GraphRAG app powered by Open-WebUI and gemma in Ollama. Encapsulated a local context search, global context search, web search (Tavily; online required) and full search. News crawlers are included for the offline knowledge graph books.
+An offline, self-hosted GraphRAG app powered by Open-WebUI and gemma in Ollama. Supporting local context search, global context search, web search (Tavily; online required) and full search. News crawlers are included for the offline knowledge graph books.
 
 ## Requirement
 GraphRAG: Python 3.10 - 3.12
@@ -22,7 +22,17 @@ open-webui serve
 In your browser, go to http://localhost:8080/
 
 ### Still in Global Terminal
-`python -m graphrag.index --init  --root . [your/root/address] #initate`
+`python -m graphrag.index --init  --root .[your/root/address] #initate`
+
+### settings.yaml
+Go to Settings.yaml, configure as follows:
+
+```shell
+claim_extraction:
+......
+......
+    enabled: true
+```
 
 After dragging the books into the .input/ ,
 
@@ -56,8 +66,8 @@ INPUT_DIR="/path/to/your/input/directory"
 
 
 ## Acknowledgement
-Crawler:
-https://github.com/LuChang-CS/news-crawler
+BBC Archive:
+https://dracos.co.uk/
 
 GraphRAG API with Open-WebUI
 https://github.com/win4r/GraphRAG4OpenWebUI
