@@ -1,17 +1,29 @@
 # GraphRAG News Intelligence 
 An offline, self-hosted GraphRAG app powered by Open-WebUI and gemma in Ollama. Supporting local context search, global context search, web search (Tavily; online required) and full search. News crawlers are included for the offline knowledge graph books.
 
+> [!NOTE] 
+> [GraphRAG](https://microsoft.github.io/graphrag/) is a structured, hierarchical approach to Retrieval Augmented Generation (RAG), as opposed to naive semantic-search approaches using plain text snippets. The GraphRAG process involves extracting a knowledge graph out of raw text, building a community hierarchy, generating summaries for these communities, and then leveraging these structures when perform RAG-based tasks.
+
+
+
 ## Requirement
 GraphRAG: Python 3.10 - 3.12
 
-`pip install -r requirement.txt`
+> [!TIP]
+>`pip install -r requirement.txt`
+
+
 
 ## Data Source
 BBC Front Page: [BBC](https://dracos.co.uk/made/bbc-news-archive/archive.php)
+BBC: [BBC] (https://feeds.bbci.co.uk/news/world/rss.xml)
+
+
 
 ## Quick Start
-
 ### Crawler
+
+
 
 ### Install Open-WebUI
 ```shell
@@ -21,18 +33,21 @@ open-webui serve
 
 In your browser, go to http://localhost:8080/
 
+
 ### Still in Global Terminal
 `python -m graphrag.index --init  --root .[your/root/address] #initate`
+
 
 ### settings.yaml
 Go to Settings.yaml, configure as follows:
 
-```shell
+```yaml
 claim_extraction:
 ......
 ......
     enabled: true
 ```
+
 
 After dragging the books into the .input/ ,
 
@@ -41,6 +56,7 @@ After dragging the books into the .input/ ,
 `python -m graphrag.prompt_tune --root . --no-entity-types #prompt-tuning` 
 
 `python -m venv venv`
+
 `source venv/bin/activate`
 
 ### After venv is activated
