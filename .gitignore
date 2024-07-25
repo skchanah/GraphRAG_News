@@ -5,5 +5,4 @@ venv/
 input/
 ragtest/
 .env
-main.py
-spider.py
+
