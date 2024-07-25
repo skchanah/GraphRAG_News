@@ -143,8 +143,16 @@ On the User tab of the same page, update your default model
 -- To be updated --
 
 ## Acknowledgement
-BBC Archive:
-https://dracos.co.uk/
+The code take inspirations from below 
 
-GraphRAG API with Open-WebUI
+
+severian42: 
+https://github.com/severian42/GraphRAG-Local-UI/
+
+
+win4r: 
 https://github.com/win4r/GraphRAG4OpenWebUI
+
+
+BBC Archive: 
+https://dracos.co.uk/
