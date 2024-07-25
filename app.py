@@ -9,7 +9,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv("./ragtest/.env")
 
 from setup import (
     setup_llm_and_embedder, 
@@ -59,10 +59,10 @@ async def lifespan(app: FastAPI):
     try:
         logger.info("Initializing search engines and question generator...")
         llm, token_encoder, text_embedder = await setup_llm_and_embedder()
-        entities, relationships, reports, text_units, description_embedding_store, covariates = await load_context()
+        entities, relationships, reports, text_units, description_embedding_store = await load_context()#, covariates = await load_context()
         local_search_engine, global_search_engine, local_context_builder, local_llm_params, local_context_params = await setup_search_engines(
             llm, token_encoder, text_embedder, entities, relationships, reports, text_units,
-            description_embedding_store, covariates
+            description_embedding_store#, covariates
         )
 
         question_generator = LocalQuestionGen(

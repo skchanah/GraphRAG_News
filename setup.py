@@ -9,7 +9,7 @@ from typing import List, Optional, Dict, Any, Union
 
 ### GraphRAG related imports
 from graphrag.query.indexer_adapters import (
-    read_indexer_covariates,
+    #read_indexer_covariates,
     read_indexer_entities,
     read_indexer_relationships,
     read_indexer_reports,
@@ -33,7 +33,7 @@ COMMUNITY_REPORT_TABLE = "create_final_community_reports"
 ENTITY_TABLE = "create_final_nodes"
 ENTITY_EMBEDDING_TABLE = "create_final_entities"
 RELATIONSHIP_TABLE = "create_final_relationships"
-COVARIATE_TABLE = "create_final_covariates"
+#COVARIATE_TABLE = "create_final_covariates"
 TEXT_UNIT_TABLE = "create_final_text_units"
 COMMUNITY_LEVEL = 2
 PORT = 8012
@@ -160,13 +160,13 @@ async def load_context():
         text_unit_df = pd.read_parquet(f"{INPUT_DIR}/{TEXT_UNIT_TABLE}.parquet")
         text_units = read_indexer_text_units(text_unit_df)
 
-        covariate_df = pd.read_parquet(f"{INPUT_DIR}/{COVARIATE_TABLE}.parquet")
-        claims = read_indexer_covariates(covariate_df)
-        logger.info(f"Number of claim records: {len(claims)}")
-        covariates = {"claims": claims}
+        #covariate_df = pd.read_parquet(f"{INPUT_DIR}/{COVARIATE_TABLE}.parquet")
+        #claims = read_indexer_covariates(covariate_df)
+        #logger.info(f"Number of claim records: {len(claims)}")
+        #covariates = {"claims": claims}
 
         logger.info("Context data loading complete")
-        return entities, relationships, reports, text_units, description_embedding_store, covariates
+        return entities, relationships, reports, text_units, description_embedding_store#, covariates
     except Exception as e:
         logger.error(f"Error loading context data: {str(e)}")
         raise

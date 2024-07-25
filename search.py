@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 async def setup_search_engines(llm, token_encoder, text_embedder, entities, relationships, reports, text_units,
-                               description_embedding_store, covariates):
+                               description_embedding_store):#, covariates):
     """
     Set up local and global search engines
     """
@@ -28,7 +28,7 @@ async def setup_search_engines(llm, token_encoder, text_embedder, entities, rela
         text_units=text_units,
         entities=entities,
         relationships=relationships,
-        covariates=covariates,
+        #covariates=covariates,
         entity_text_embeddings=description_embedding_store,
         embedding_vectorstore_key=EntityVectorStoreKey.ID,
         text_embedder=text_embedder,

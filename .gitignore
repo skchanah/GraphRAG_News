@@ -2,11 +2,8 @@
 cache/
 main.py
 venv/
-original.py
-work.py
 input/
-output/
-prompts/
-lancedb/
-settings.yaml
+ragtest/
 .env
+main.py
+spider.py
